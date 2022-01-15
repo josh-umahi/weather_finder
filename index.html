@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Weather Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Work+Sans:wght@300;400&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <section class="centeredCard">
+        <h1 class="welcomeText"">Enter a city to view its weather</h1>
+        <div class=" searchDiv">
+            <input type="text" id="searchInput" placeholder="Search">
+            <button class="searchButton" onclick="submitSearch()">
+                <img src="images/searchIcon.png" alt="">
+            </button>
+            </div>
+            <div id="suggestionsOuterDiv">
+                <h2 class="suggestionText">Suggestions:</h2>
+                <div class="suggestionsDiv">
+                    <button onclick="suggestedSearch('lagos')">Lagos</button>
+                    <button onclick="suggestedSearch('paris')">Paris</button>
+                    <button onclick="suggestedSearch('abuja')">Abuja</button>
+                    <button onclick="suggestedSearch('tokyo')">Tokyo</button>
+                    <button onclick="suggestedSearch('los angeles')">Los Angeles</button>
+                </div>
+            </div>
+            <button id="showSuggestionButton" onclick="showSuggestionsDiv()">
+                <h2 class="showSuggestionText">Show Suggestions</h2>
+            </button>
+            <div class="weatherInfo" id="weatherInfo">
+                <h2 id="cityAndCountry"></h2>
+                <h2 id="temperature"></h2>
+                <div class="moreInfo1">
+                    <img src="" alt="" id="icon" />
+                    <h2 id="description"></h2>
+                </div>
+                <h2 id="todaysHigh"></h2>
+                <h2 id="todaysLow"></h2>
+                <h2 id="windSpeed"></h2>
+                <h2 id="humidity"></h2>
+            </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+
+button,
+input {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Courier Prime", monospace;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("images/bg.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.centeredCard {
+  background: #4173f0f3;
+  width: 100%;
+  max-width: 445px;
+  padding: 2.3em;
+  box-shadow: rgba(240, 211, 46, 0.4) 5px 5px, rgba(240, 211, 46, 0.3) 10px 10px,
+    rgba(240, 211, 46, 0.2) 15px 15px, rgba(240, 211, 46, 0.1) 20px 20px,
+    rgba(240, 211, 46, 0.05) 25px 25px;
+}
+
+.welcomeText {
+  font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.searchDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.25em 0 1.25em;
+}
+
+.searchButton {
+  border-radius: 50%;
+  margin: 0.5em;
+  height: 50px;
+  width: 50px;
+  background: #fff;
+}
+
+.searchButton:hover {
+  background: rgba(255, 255, 255, 0.767);
+  cursor: pointer;
+}
+
+.searchDiv input {
+  background: #fff;
+  padding: 0em 1em;
+  border-radius: 28px;
+  height: 50px;
+  width: 80%;
+  text-transform: capitalize;
+  font-size: 1.25em;
+}
+
+::placeholder {
+  color: 999;
+}
+
+.searchButton img {
+  height: 25px;
+}
+
+.suggestionText {
+  text-align: left;
+  margin-bottom: 0.35em;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+#showSuggestionButton {
+  font-size: 1em;
+  display: none;
+}
+
+.showSuggestionText {
+  font-family: "Courier Prime", monospace;
+  text-align: left;
+  color: #fff;
+  font-size: inherit;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.suggestionsDiv {
+  display: flex;
+}
+
+.suggestionsDiv button {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.8em;
+  padding: 0.75em 1em;
+  background: #33323241;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin-left: 0;
+  margin-right: 0.75em;
+}
+
+.suggestionsDiv button:hover {
+  background: #33323285;
+  cursor: pointer;
+}
+
+.weatherInfo {
+  text-align: center;
+  margin-top: 2em;
+  display: none;
+}
+
+.weatherInfo h2 {
+  font-weight: 400;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 150%;
+}
+
+.weatherInfo img {
+  height: 60px;
+}
+
+#cityAndCountry,
+#temperature {
+  font-size: 1.8em;
+  line-height: 110%;
+}
+
+#temperature {
+  font-weight: 700;
+}
+
+#windSpeed {
+  text-transform: none;
+}
+
+.moreInfo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moreInfo1 h2 {
+  margin-left: 0.25em;
+}
