@@ -1,3 +1,5 @@
+import apiKey from "./config.js";
+
 function displayResults(data) {
     const cityName = data.name;
     const countryName = data.sys.country;
@@ -25,7 +27,6 @@ function displayResults(data) {
 function submitSearch() {
     // Example Request:
     // https://api.openweathermap.org/data/2.5/weather?q=[cityName]&units=metric&appid=[apiKey]
-    const apiKey = "381ee83c907b8945c65762f059e3eacb"
     const cityName = $("#searchInput").val().trim();
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
 
@@ -37,6 +38,9 @@ function submitSearch() {
         displayResults(data);
     });
 }
+
+const searchButton = document.getElementById('searchButton');
+searchButton.onclick = () => submitSearch()
 
 function changeBodyImage(descriptionLowercase) {
     let bgImageTitle;
@@ -60,14 +64,29 @@ function changeBodyImage(descriptionLowercase) {
 }
 
 function suggestedSearch(country) {
+    console.log("object");
     $("#searchInput").val(country);
     submitSearch();
 }
+
+const searchLagos = document.getElementById('searchLagos');
+const searchParis = document.getElementById('searchParis');
+const searchAbuja = document.getElementById('searchAbuja');
+const searchTokyo = document.getElementById('searchTokyo');
+const searchLosAngeles = document.getElementById('searchLosAngeles');
+
+searchLagos.onclick = () => suggestedSearch("lagos")
+searchParis.onclick = () => suggestedSearch("paris")
+searchAbuja.onclick = () => suggestedSearch("abuja")
+searchTokyo.onclick = () => suggestedSearch("tokyo")
+searchLosAngeles.onclick = () => suggestedSearch("los angeles")
 
 function showSuggestionsDiv() {
     $("#showSuggestionButton").hide()
     $("#suggestionsOuterDiv").show()
 }
+const showSuggestionButton = document.getElementById('showSuggestionButton');
+showSuggestionButton.onclick = () => showSuggestionsDiv()
 
 function showShowSuggestionsButton() {
     $("#suggestionsOuterDiv").hide()

@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Work+Sans:wght@300;400&display=swap"
         rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./main.js" defer></script>
+    <script type="module" src="./main.js" defer></script>
+    <script type="module" src="./config.js" defer></script>
 </head>
 
 <body>
@@ -18,21 +19,21 @@
         <h1 class="welcomeText"">Enter a city to view its weather</h1>
         <div class=" searchDiv">
             <input type="text" id="searchInput" placeholder="Search">
-            <button class="searchButton" onclick="submitSearch()">
+            <button class="searchButton" id="searchButton">
                 <img src="images/searchIcon.png" alt="">
             </button>
             </div>
             <div id="suggestionsOuterDiv">
                 <h2 class="suggestionText">Suggestions:</h2>
                 <div class="suggestionsDiv">
-                    <button onclick="suggestedSearch('lagos')">Lagos</button>
-                    <button onclick="suggestedSearch('paris')">Paris</button>
-                    <button onclick="suggestedSearch('abuja')">Abuja</button>
-                    <button onclick="suggestedSearch('tokyo')">Tokyo</button>
-                    <button onclick="suggestedSearch('los angeles')">Los Angeles</button>
+                    <button id="searchLagos">Lagos</button>
+                    <button id="searchParis">Paris</button>
+                    <button id="searchAbuja">Abuja</button>
+                    <button id="searchTokyo">Tokyo</button>
+                    <button id="searchLosAngeles">Los Angeles</button>
                 </div>
             </div>
-            <button id="showSuggestionButton" onclick="showSuggestionsDiv()">
+            <button id="showSuggestionButton">
                 <h2 class="showSuggestionText">Show Suggestions</h2>
             </button>
             <div class="weatherInfo" id="weatherInfo">
